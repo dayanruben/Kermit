@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-    if: ${{ github.ref != 'refs/heads/eap/kotlin' && github.head_ref != 'eap/kotlin' }}
     runs-on: macos-latest
     steps:
       - name: Checkout the repo
