@@ -26,7 +26,7 @@ plugins {
 }
 
 // apiValidation { // Disabled for Kotlin EAP
-    nonPublicMarkers.add("co.touchlab.kermit.ExperimentalKermitApi")
+//    nonPublicMarkers.add("co.touchlab.kermit.ExperimentalKermitApi")
 //    ignoredProjects.addAll(listOf("kermit-gradle-plugin", "kermit-ir-plugin", "kermit-ir-plugin-native"))
 // }
 
