@@ -18,17 +18,17 @@ buildscript {
 plugins {
     alias(libs.plugins.buildConfig) apply false
     alias(libs.plugins.kotlin.multiplatform) apply false
-    alias(libs.plugins.binaryCompatability)
+    // alias(libs.plugins.binaryCompatability) // Disabled for Kotlin EAP compatibility check
     alias(libs.plugins.dokka) apply false
     alias(libs.plugins.touchlab.docusaurus.template)
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.ktlint.gradle) apply false
 }
 
-apiValidation {
+// apiValidation { // Disabled for Kotlin EAP
     nonPublicMarkers.add("co.touchlab.kermit.ExperimentalKermitApi")
 //    ignoredProjects.addAll(listOf("kermit-gradle-plugin", "kermit-ir-plugin", "kermit-ir-plugin-native"))
-}
+// }
 
 val GROUP: String by project
 val VERSION_NAME: String by project
