@@ -24,7 +24,7 @@ jobs:
           update: true
           install: git mingw-w64-x86_64-toolchain
       - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v1
+        uses: gradle/actions/wrapper-validation@v5
       - name: Cache gradle
         uses: actions/cache@v4
         with:
@@ -59,7 +59,7 @@ jobs:
           distribution: "adopt"
           java-version: "17"
       - name: Validate Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v1
+        uses: gradle/actions/wrapper-validation@v5
       - name: Kotlin EAP smoke check
         run: ./gradlew -version
 
