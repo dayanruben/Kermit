@@ -3,6 +3,7 @@ on: workflow_dispatch
 
 jobs:
   docusaurus-deploy:
+    if: github.repository == 'touchlab/Kermit'
     runs-on: macos-latest
     steps:
       - name: Checkout the repo
