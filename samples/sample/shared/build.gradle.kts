@@ -49,9 +49,6 @@ kotlin {
             implementation(libs.ktor.client.cio)
 
             implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(libs.coil.compose)
-            implementation(libs.coil.network.ktor3)
         }
 
         commonTest.dependencies {
@@ -67,6 +64,11 @@ kotlin {
         }
         androidMain {
             dependsOn(mobileMain)
+            dependencies {
+                implementation(compose.foundation)
+                implementation(libs.coil.compose)
+                implementation(libs.coil.network.ktor3)
+            }
         }
         iosMain {
             dependsOn(mobileMain)
